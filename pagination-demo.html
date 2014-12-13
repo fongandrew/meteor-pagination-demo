@@ -1,0 +1,39 @@
+<head>
+  <title>pagination-demo</title>
+</head>
+
+<template name="layout">
+  {{> newPost}}
+  <hr />
+  {{> yield}}
+</template>
+
+<template name="newPost">
+  <form id="new-post">
+    <label for="post-rank">Rank:</label>
+    <input type="text" name="rank" id="post-rank" />
+    <input type="submit" />
+  </form>
+</template>
+
+<template name="posts">
+  {{#if hasBack}}
+    <a href="{{pathFor "posts" query=backParams}}">Back</a>
+  {{else}}
+    Back
+  {{/if}}
+
+  {{#each posts}}
+    <div>{{rank}} - {{_id}}</div>
+  {{/each}}
+
+  {{#if hasNext}}
+    <a href="{{pathFor "posts" query=nextParams}}">Next</a>
+  {{else}}
+    Next
+  {{/if}}
+</template>
+
+<template name="loading">
+  Loading ...
+</template>
