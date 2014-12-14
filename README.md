@@ -1,7 +1,7 @@
 Meteor Pagination Demo
 ======================
 
-This project demonstrates how to handle pagination in [Meteor.js](http://meteor.com/).
+This project demonstrates how to handle pagination in [Meteor.js](http://meteor.com/). See this [blog post](http://andrewfong.com/blog/2014/12/14/pagination-in-meteor/) for more details.
 
 License
 -------
